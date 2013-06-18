@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="StepProgressBarControl.StepProgressBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:StepProgressBarControl" mc:Ignorable="d" x:Name="Main"
+             d:DesignHeight="300" d:DesignWidth="300" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" 
+             VerticalContentAlignment="Stretch" VerticalAlignment="Stretch">
+    <UserControl.Resources>
+        <local:IsProgressedConverter x:Key="IsProgressedConverter" />
+    </UserControl.Resources>
+    <ItemsControl HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" ItemsSource="{Binding ElementName=Main, Path=TotalStepsAsList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Ellipse HorizontalAlignment="Center" Stroke="Black" Height="5" Width="5" Margin="0,0,7,0" StrokeThickness="1"/>
+                    <Ellipse HorizontalAlignment="Center" Stroke="Transparent" Height="4" Width="4" Margin="0,0,7,0">
+                        <Ellipse.Style>
+                            <Style>
+                                <Style.Triggers>
+                                    <DataTrigger>
+                                        <DataTrigger.Binding>
+                                            <MultiBinding Converter="{StaticResource IsProgressedConverter}">
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"/>
+                                                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:StepProgressBar}}" Path="CurrentStep"/>
+                                            </MultiBinding>
+                                        </DataTrigger.Binding>
+                                        <DataTrigger.Value>False</DataTrigger.Value>
+                                        <Setter Property="Ellipse.Fill" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:StepProgressBar}}, Path=NotProgressedBrush}"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger>
+                                        <DataTrigger.Binding>
+                                            <MultiBinding Converter="{StaticResource IsProgressedConverter}">
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"/>
+                                                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:StepProgressBar}}" Path="CurrentStep"/>
+                                            </MultiBinding>
+                                        </DataTrigger.Binding>
+                                        <DataTrigger.Value>True</DataTrigger.Value>
+                                        <Setter Property="Ellipse.Fill" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:StepProgressBar}}, Path=ProgressedBrush}"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+                </Grid>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</UserControl>

@@ -1,0 +1,16 @@
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\bin\Debug\StepProgressBarControl.exe
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\bin\Debug\StepProgressBarControl.pdb
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl.csprojResolveAssemblyReference.cache
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\MainWindow.g.cs
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBar.g.cs
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\App.g.cs
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl_MarkupCompile.cache
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl_MarkupCompile.lref
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\MainWindow.baml
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBar.baml
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl.g.resources
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl.Properties.Resources.resources
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl.csproj.GenerateResource.Cache
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl.exe
+C:\Google Drive\Programming\Unit Testing\StepProgressBar\StepProgressBar\obj\x86\Debug\StepProgressBarControl.pdb
